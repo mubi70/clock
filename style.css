@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -40,7 +40,6 @@
     display: inline-block;
     text-align: center;
     position: relative;
-
 }
 
 .clock span::after {
@@ -49,7 +48,6 @@
     bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
 #hrs::after {
@@ -64,34 +62,47 @@
     content: "SEC";
 }
 
+#ampm {
+    font-size: 50px; /* Same size as the clock numbers */
+    margin-left: 20px;
+    font-weight: 550;
+    color: #f39c12; /* Distinct color for AM/PM */
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
-    .clock {
-        display: flex;
-        flex-direction: column;
-    }
     .container {
-        width: 170px;
-        height: 400px;
-    }
-    .container:hover {
-        box-shadow: 5px 5px 8px rgb(72, 74, 74);
-    }
-    .container::before {
-        width: 120px;
-        height: 110px;
-        background: #cacaca;
-        border-radius: 50%;
+        width: 90%;
+        height: auto;
     }
 
-    .container::after {
-        width: 120px;
-        height: 110px;
-        background: #ff0000;
-        border-radius: 7px;
+    .clock {
+        flex-direction: column;
+        padding: 20px;
     }
 
     .clock span {
-        font-size: 65px;
-        font-weight: 550;
+        font-size: 65px; /* Reduced font size */
+        margin-bottom: 10px;
+    }
+
+    #ampm {
+        font-size: 50px; /* Smaller AM/PM on mobile */
+        margin-left: 0; /* Center aligned on mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .clock span {
+        font-size: 45px; /* Further reduced font size */
+    }
+
+    #ampm {
+        font-size: 30px; /* Adjust AM/PM size for smaller devices */
     }
 }
