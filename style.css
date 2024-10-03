@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -63,13 +62,12 @@
 }
 
 #ampm {
-    font-size: 50px; /* Same size as the clock numbers */
+    font-size: 50px; 
     margin-left: 20px;
     font-weight: 550;
-    color: #f39c12; /* Distinct color for AM/PM */
+    color: #f39c12; 
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
@@ -82,13 +80,13 @@
     }
 
     .clock span {
-        font-size: 65px; /* Reduced font size */
+        font-size: 65px; 
         margin-bottom: 10px;
     }
 
     #ampm {
-        font-size: 50px; /* Smaller AM/PM on mobile */
-        margin-left: 0; /* Center aligned on mobile */
+        font-size: 50px; 
+        margin-left: 0; 
     }
 }
 
@@ -99,10 +97,10 @@
     }
 
     .clock span {
-        font-size: 45px; /* Further reduced font size */
+        font-size: 45px;
     }
 
     #ampm {
-        font-size: 30px; /* Adjust AM/PM size for smaller devices */
+        font-size: 30px; 
     }
 }
